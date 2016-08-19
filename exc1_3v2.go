@@ -26,7 +26,7 @@ func main() {
 func createSlice(max int) []string {
 
 	numSlice := make([]string, max)
-	for i := 1; i < max; i++ {
+	for i := 0; i < max; i++ {
 		j := IntToString(i)
 		numSlice[i] = j
 	}
@@ -68,7 +68,7 @@ func echo1(numSlice []string) {
 
 func echo2(numSlice []string) {
 	start := time.Now()
-	result := strings.Join(numSlice[0:], " ")
+	result := strings.Join(numSlice, " ")
 	elapsed := time.Since(start)
 	fmt.Println(result)
 
